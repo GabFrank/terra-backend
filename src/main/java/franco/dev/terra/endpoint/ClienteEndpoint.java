@@ -40,8 +40,8 @@ public class ClienteEndpoint {
 		return service.delete(entity);
 	}
 	
-	@RequestMapping(value="/deleteById", method = RequestMethod.POST)
-	public String deleteById(@RequestBody Integer id){
+	@RequestMapping(value="/deleteById/{id}", method = RequestMethod.POST)
+	public String deleteById(@PathVariable("id") Integer id){
 		return service.deleteById(id);
 	}
 	
